@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Curling Club</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/images/favicon.ico">
+
+    <base href="/">
+
+    <link rel="manifest" href="/assets/images/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/assets/images/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Polyfill(s) for older browsers -->
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="node_modules/three/build/three.js"></script>
+    <script src="node_modules/three/examples/js/controls/OrbitControls.js"></script>
+    <script src="systemjs.config.js"></script>
+    <link rel="stylesheet"  href="node_modules/@angular/material/core/theming/prebuilt/indigo-pink.css">
+    <script>
+      System.import('app').catch(function(err){ console.error(err); });
+    </script>
+  </head>
+  <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+  </style>
+  <body>
+    <mon-app>Loading AppComponent content here ...</mon-app>
+  </body>
+</html>

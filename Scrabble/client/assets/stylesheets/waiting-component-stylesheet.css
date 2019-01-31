@@ -1,0 +1,50 @@
+html {
+    background-image: url("assets/images/scrabbleWallpaper.png");
+    margin: 0;
+    padding: 0;
+    background-repeat: repeat;
+    height: 100vh;
+}
+h1 {
+    font-size: 30px;
+    margin : 0px;
+    padding : 10px;
+}
+p {
+    font-size : 20px;
+    margin: 10px;
+    padding: 0px;
+}
+button {
+    background-color: white;
+    width: 200px;
+    color: black;
+    font-size: 17px;
+    text-decoration: none;
+    border: 2px;
+    padding: 5px 30px;
+    border-style: solid;
+    border-color: #07E;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #07E;
+    color: white;
+}
+.chatLog {  
+    margin: 0 auto;
+    text-align: left;
+    line-height: 15px;
+    background-color: white;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    width: 400px;
+    height: 250px;
+    overflow: auto;
+}
+.chatText {
+    font-size: 17px;
+}

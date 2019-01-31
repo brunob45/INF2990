@@ -1,0 +1,10 @@
+body {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    background-image: url("../assets/images/sagayata.png");
+    background-repeat: repeat;
+}
+
+md-card {
+    width: 60%;
+    height: 50%;
+}

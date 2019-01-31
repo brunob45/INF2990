@@ -1,0 +1,84 @@
+<html>
+
+<body>
+    <h1>{{title}}</h1>
+    <div class="menu"><br>
+        <button id="DisconnectBtn" (click)="disconnect(this.user.name, this.user.password)" tabindex=-1>Déconnexion</button>
+        <div id="name"> Nom du joueur : {{user.name}}</div>
+        <div id="score"> Votre score : {{user.score}} </div>
+        <div id="nombreLettres" *ngIf="this.user.nbLetters !== 7">Nombre de lettres : {{user.nbLetters}}</div>
+        <div id="playerList"> Joueurs :
+            <div id="opponent" *ngFor="let p of opponents">
+                <p *ngIf="p.connected && p.active">{{p.name}}* : {{p.score}}</p>
+                <p *ngIf="p.connected && !p.active">{{p.name}} : {{p.score}}</p>
+                <p class="strike" *ngIf="!p.connected">{{p.name}} : {{p.score}}</p>
+            </div>
+        </div>
+        <br>
+        <div id="timer-selector" *ngFor="let p of opponents">
+            <timer-selector *ngIf="(p.name === this.user.name) && p.active"></timer-selector>
+        </div>
+        <div id="winner" *ngIf="winner !== '' "> Bravo à {{winner}} pour avoir gagné!</div>
+    </div>
+    <div class="chat">
+        <div class="chatLog">
+            <div *ngFor="let s of chat.log">
+                <div class="chatPlayer" *ngIf="!s.server"><p>{{s.text}}</p></div>
+                <div class="chatServer" *ngIf="s.server"><p>{{s.text}}</p></div>
+            </div>
+        </div>
+        <div class="chatInput">
+            <input name="cInput" class="chatInput" [value]="chat.input" (keyup.enter)="chat.executeInput()" (keyup)="chat.inputKeyUp($event)" tabindex="2">
+            <button type="submit" class="sendButton" (click)="chat.executeInput()" tabindex=-1>Envoyer</button>
+        </div>
+    </div>
+    <div class="columns" id="firstColumn">
+        <input class="cell" class="columnCell" [attr.id]="cell.id" *ngFor="let cell of columns.cells" attr.value="{{cell.value}}" disabled>
+    </div>
+
+    <div class="rows">
+        <input class="cell" class="rowCell" [attr.id]="cell.id" *ngFor="let cell of rows.cells" attr.value="{{cell.value}}" disabled>
+    </div>
+
+    <img class="board" src="../assets/images/board.jpg">
+
+    <div class="game">
+        <div class="frame">
+            <div class="grid">
+                <div class="grid_row" *ngFor="let row of grid.data">
+                    <div [attr.id]="cell.id" *ngFor="let cell of row" [ngClass]="(cell.color===0) ? 'cellFull' : 'cellGrid'">
+                        <div class="LetterGrid">{{cell.char}}
+                            <div class="tokenGridValue">{{cell.value}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="rows">
+        <input class="cell" class="rowCell" [attr.id]="cell.id" *ngFor="let cell of rows.cells" attr.value="{{cell.value}}" disabled>
+    </div>
+
+    <div class="deck" id="tabindex1" tabindex="1">
+        <div class="secondColumns">
+            <input class="cell" class="columnCell" [attr.id]="cell.id" *ngFor="let cell of columns.cells" attr.value="{{cell.value}}" disabled>
+        </div>
+
+        <div [attr.id]="letter.id" [ngClass]="(letter.selected) ? 'selected' : 'deckCell'" *ngFor="let letter of deck.letters">{{letter.letter}}
+            <div class="tokenValue">{{letter.value}}</div>
+        </div>
+    </div>
+
+    <div tabindex="3" (focus)="focusFunction()"> </div> <!--> Pour repartir sur le tabindex 1 <!-->
+
+    <div *ngIf="win" class="win alert alert-success box-msg" role="alert">
+        <h1> Bravo, vous avez gagné! </h1>
+    </div>
+
+    <div *ngIf="loading" class="loading alert alert-success box-msg" role="alert">
+        <h1> Chargement... </h1>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,279 @@
+html {
+    background-image: url("assets/images/scrabbleWallpaper.png");
+    margin: 0;
+    padding: 0;
+    background-repeat: repeat;
+    height: 100%;
+    height: 100vh;
+}
+body {
+    width: 100%;
+    height: 100%;
+}
+div {
+    font-size: 17px;
+}
+#name {
+    margin-top: 10px;
+}
+#loginBtn:disabled {
+    background-color: #D3D3D3;
+}
+#registerBtn:disabled {
+    background-color: #D3D3D3;
+}
+.loading {
+    color: red;
+}
+.win {
+    color: #2c4;
+}
+h1 {
+    font-size: 250%;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+h2 {
+    text-align: center;
+    margin: 10px 0px;
+    padding: 0;
+    font-weight: normal;
+    font-size: 17px;
+}
+button {
+    background-color: white;
+    width: 200px;
+    color: black;
+    font-size: 17px;
+    text-decoration: none;
+    border: 2px;
+    padding: 5px 30px;
+    border-style: solid;
+    border-color: #07E;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #07E;
+    color: white;
+}
+.menu {
+    float: left;
+    background-color: white;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    width: 250px;
+    height: 450px;
+}
+.game {
+    display: inline-block;
+    margin: auto;
+    width: 450px;
+}
+.chatLog {
+    float: right;
+    text-align: left;
+    line-height: 15px;
+    background-color: white;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    width: 250px;
+    height: 450px;
+    overflow: auto;
+}
+.grid {
+    float: center;
+    width: 450px;
+    height: 450px;
+}
+.cell {
+    width: 30px;
+    height: 30px;
+    float: left;
+    box-sizing: border-box;
+    color: black;
+    background: transparent;
+}
+.cell:focus {
+    background-color: #DDD;
+}
+.columnCell {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    box-sizing: border-box;
+    background: transparent;
+    border: none;
+    color: black;
+}
+.rowCell {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    box-sizing: border-box;
+    background: transparent;
+    padding-top: 0px;
+    border: none;
+    color: black;
+}
+input.cell {
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    font-size: 22px;
+    font-family: arial;
+    text-align: center;
+    position: relative;
+}
+.frame {
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    width: 450px;
+}
+.chatInput.cInput {
+    margin: auto;
+    width: 100px;
+}
+p {
+    margin: 10px;
+}
+.board {
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    z-index: 1;
+    height: 450px;
+    width: 450px;
+    position: absolute;
+}
+.columns {
+    display: inline-block;
+    margin: auto;
+    position: absolute;
+    margin-top: -30px;
+}
+.secondColumns {
+    margin: 0;
+    position: absolute;
+    margin-top: -35px;
+}
+#firstColumn {
+    margin-left: 30px;
+}
+.rows {
+    color: black;
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 450px;
+    top: -15px;
+    padding: 0px;
+}
+.chatInput {
+    color: black;
+    background: white;
+    font-size: 20px;
+    width: 250px;
+    height: 25px;
+}
+.chat {
+    float: right;
+}
+.deck {
+    border-style: solid;
+    border-width: 2px;
+    background-color: white;
+    border-color: black;
+    color: black;
+    height: 40px;
+    width: 440px;
+    margin: auto;
+    margin-top: 15px;
+    padding: 5px;
+}
+.deckCell, .selected {
+    width: 35px;
+    height: 35px;
+    font-size: 30px;
+    font-weight: normal;
+    border-style: solid;
+    border-width: 2px;
+    background-color: white;
+    color: inherit;
+    border-color: inherit;
+    display: inline-block;
+    margin: 0px 2px;
+}
+.tokenValue {
+    font-size: 12px;
+    float: right;
+    margin-top: 20px;
+    margin-right: 2px;
+}
+.tokenGridValue {
+    font-size: 10px;
+    float: right;
+    margin-bottom: 2px;
+}
+.LetterGrid {
+    font-size: 20px;
+    margin-top: 3px;
+    margin-right: 3px;
+}
+.cellGrid {
+    width: 30px;
+    height: 30px;
+    float: left;
+    z-index: 2;
+    position: relative;
+    box-sizing: border-box;
+    color: black;
+}
+.cellFull {
+    width: 30px;
+    height: 30px;
+    float: left;
+    z-index: 2;
+    position: relative;
+    box-sizing: border-box;
+    color: black;
+    background-color:white;
+}
+.sendButton {
+    margin: 5px 25px;
+}
+:focus { 
+    background-color: lightcyan;
+}
+#nombreLettres {
+    height: 250px;
+}
+#winner {
+    font-size: 24px;
+    color: green;
+    font-weight: bold;
+}
+.selected {
+    font-weight: bold;
+    border-width: 3px;
+    font-size: 32px;
+    width: 37px;
+    height: 37px;
+    background-color: #cbe;
+    color: green;
+    border-color: green;
+}
+.chatServer {
+    color: blue;
+}
+p.strike {
+    text-decoration: line-through;
+}
+.playerList {
+    border: 2px;
+}

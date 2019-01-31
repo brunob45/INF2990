@@ -1,0 +1,145 @@
+
+
+div {
+  font-size: 17px;
+}
+#name {
+  margin-top: 10px;
+}
+#loginBtn:disabled {
+  background-color: #D3D3D3;
+}
+#registerBtn:disabled {
+  background-color: #D3D3D3;
+}
+.loading {
+  color: red;
+}
+.win {
+  color: #2c4;
+}
+h1 {
+  font-size: 250%;
+  text-align: center;
+  margin: 30px 0px;
+  padding: 0;
+}
+h2 {
+  text-align: center;
+  margin: 10px 0px;
+  padding: 0;
+  font-weight: normal;
+  font-size: 17px;
+}
+button {
+  background-color: white;
+  width: 200px;
+  color: black;
+  font-size: 17px;
+  text-decoration: none;
+  border: 2px;
+  padding: 5px 30px;
+  border-style: solid;
+  border-color: #4CAf50;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+.main {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+.score {
+    width: 150px;
+}
+.menu {
+  display:inline-block;
+  position:relative;
+  float:left;
+  background-color: white;
+  width: 300px;
+  height: 432px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+}
+.game {
+  display:inline-block;
+  width:450px;
+  float:center;
+  position:relative;
+}
+.highScores{
+  display:inline-block;
+  position:relative;
+  float:right;
+  background-color: white;
+  width: 300px;
+  height: 432px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+}
+
+.grid {
+  width: 450px;
+  height: 432px;
+}
+.cell {
+  background-color: white;
+  width: 50px;
+  height: 48px;
+  float: left;
+  box-sizing: border-box;
+  color: black;
+}
+.cell:focus {
+ background-color: #DDD;
+}
+input.cell {
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  font-size: 42px;
+  font-family: arial;
+  text-align: center;
+  position: relative;
+}
+.frame {
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  width: 450px;
+}
+
+
+#verticalBar1, #verticalBar2, #verticalBar3, #verticalBar4 {
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  position: absolute;
+}
+#verticalBar1 {
+  margin-left: 149px;
+  height: 428px;
+}
+#verticalBar2 {
+  margin-left: 299px;
+  height: 428px;
+}
+#verticalBar3 {
+  margin-top: 144px;
+  width: 445px;
+}
+#verticalBar4 {
+  margin-top: 288px;
+  width: 445px;
+}
+#difficulty {
+  margin-top: 5px;
+}

@@ -1,0 +1,87 @@
+body {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  /*background-image: url("sayagata-400px.png");*/
+  background-repeat: repeat;
+  color: black;
+  text-align: center;
+}
+div {
+  font-size: 105%;
+}
+#name {
+  margin-top: 10px;
+}
+#loginBtn:disabled {
+  background-color: #D3D3D3;
+}
+#registerBtn:disabled {
+  background-color: #D3D3D3;
+}
+.loading {
+  color: red;
+}
+.win {
+  color: #2c4;
+}
+h1 {
+  font-size: 250%;
+  text-align: center;
+  margin: 30px 0px;
+  padding: 0;
+}
+h2 {
+  text-align: center;
+  margin: 10px 0px;
+  padding: 0;
+  font-weight: normal;
+  font-size: 17px;
+}
+button {
+  background-color: black;
+  width: 200px;
+  color: white;
+  font-size: 105%;
+  text-decoration: none;
+  padding: 5px 30px;
+  border: 1px;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  margin-bottom:2.5%;
+  float:bottom;
+}
+
+button:hover {
+  background-color: #204499;
+  color: white;
+}
+
+canvas{  
+  width: 100%;
+  height: 100%;
+}
+
+.main {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+.score {
+    width: 150px;
+}
+.all {
+  margin-left: 15%;
+  margin-right:15%;
+  float: center;
+  border: 0.15vw solid #000000;
+}
+.menu {
+  display:table-cell;
+  background-color: white;
+  width: 15%;
+  border-right: 0.15vw solid #000000;
+}
+.game {
+  display:table-cell; 
+  width: 54%;
+}

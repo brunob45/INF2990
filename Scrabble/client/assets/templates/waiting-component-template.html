@@ -1,0 +1,27 @@
+<html>
+  <body>
+    <h1>Veuillez patienter...</h1>    
+    <p>Nombre de joueurs manquants : {{nbRemainingPlayer}}</p>
+    <p>Nombre de joueurs connectés : {{nbConnectedPlayer}}</p>      
+    <img *ngIf="nbConnectedPlayer >= 1 " src="../assets/images/bookOpen.png" width="64" height="64">
+    <img *ngIf="nbConnectedPlayer >= 2 " src="../assets/images/bookOpen.png" width="64" height="64">
+    <img *ngIf="nbConnectedPlayer >= 3 " src="../assets/images/bookOpen.png" width="64" height="64">
+    <img *ngIf="nbRemainingPlayer >= 1 " src="../assets/images/bookClosed.png" width="64" height="64">
+    <img *ngIf="nbRemainingPlayer >= 2 " src="../assets/images/bookClosed.png" width="64" height="64">
+    <img *ngIf="nbRemainingPlayer >= 3 " src="../assets/images/bookClosed.png" width="64" height="64">
+    <br><br>
+    <button (click)="disconnect()">Retour</button>
+
+    <div class="chat"><br>
+      <div class="chatLog">
+        <p class="chatText" *ngFor="let line of chat.log">{{line.text}}</p>
+      </div><br>
+      <div class="chatInput">
+        <input name="cInput" 
+          [value]="chat.input"
+          (keyup.enter)="chat.executeInput()" (keyup)="chat.inputKeyUp($event)">
+        <button type="submit" (click)="chat.executeInput()">Envoyer</button>
+      </div>
+    </div>
+  </body>
+</html>

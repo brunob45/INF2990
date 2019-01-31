@@ -1,0 +1,45 @@
+<body>
+  <h1>{{title}}</h1>
+  <div class="wrapper">
+    <div class="menu"><br>
+       <button id="DisconnectBtn" (click)="disconnect(this.user.name, this.user.password)">Deconnexion</button>
+       <div id="name"> Nom du joueur : {{user.name}}</div>
+       <div id="difficulty">Difficulté : {{user.difficulty}}</div><br>
+       <button onclick="timer.hidden = !timer.hidden">Montrer/Cacher Chronomètre</button><br>
+       <button (click)="setEasy()" (click)="newGrid()">Nouveau Normal</button><br>
+       <button (click)="setHard()" (click)="newGrid()">Nouveau Difficile</button><br>
+       <button (click)="grid.reset(); restartStopwatch();">Recommencer</button>
+       <h2 id="timer"> Temps : {{timeToString(time)}}</h2>
+    </div>
+    <div class ="game">
+       <div class="frame">
+          <div class="grid">
+             <input class="cell" [attr.id]="cell.id" tabindex="0"
+               *ngFor="let cell of grid.cells" (keydown)="newInput_Handler($event)"
+               (keyup)="fullChecker()" attr.value="{{cell.value}}" [disabled]="cell.disabled" [style.color] = "cell.color">
+             <div id="verticalBar1"></div>
+             <div id="verticalBar2"></div>
+             <div id="verticalBar3"></div>
+             <div id="verticalBar4"></div>
+          </div>
+       </div>
+     </div>
+     <div class = "highScores">
+       <h3> Meilleurs temps </h3>
+       <h2> Normal </h2>
+        <p *ngFor="let s of highScoresEasy; let i=index">{{i+1}}. {{s.username}} : {{ timeToString(s.score) }}</p>
+       <h2> Difficile </h2>
+        <p *ngFor="let s of highScoresHard; let i=index">{{i+1}}. {{s.username}} : {{ timeToString(s.score) }}</p>
+     </div>
+  </div>
+
+  <div *ngIf="win" class="win alert alert-success box-msg" role="alert">
+    <h1> Bravo, vous avez gagné! </h1>
+    <p>Voici votre temps: {{minutes}}m {{seconds}}s</p>
+  </div>
+
+  <div *ngIf="loading" class="loading alert alert-success box-msg" role="alert">
+     <h1> Chargement... </h1>
+  </div>
+
+</body>

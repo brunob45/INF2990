@@ -1,0 +1,39 @@
+<html>
+  <body>
+    <br>
+    <h1 class="title">CHOISISSEZ LE NOMBRE DE JOUEURS</h1>
+    <md-grid-list layout="row" cols="3">
+      <md-grid-tile colspan="1">
+          <md-card (click)="chooseTypeOfGame(2)">
+            <md-card-header>
+              <h2 class="md-title">2 joueurs</h2>
+            </md-card-header>
+            <img md-card-image src="../assets/images/2players.png">
+          </md-card>
+
+      </md-grid-tile>
+      <md-grid-tile colspan="1">
+        <md-card (click)="chooseTypeOfGame(3)">
+          <md-card-header>
+            <h2 class="md-title">3 joueurs</h2>
+          </md-card-header>
+        
+          <img md-card-image src="../assets/images/3players.png">
+
+          </md-card>
+        </md-grid-tile>
+
+        <md-grid-tile colspan="1">
+        <md-card (click)="chooseTypeOfGame(4)">
+          <md-card-header>
+            <h2 class="md-title">4 joueurs</h2>
+          </md-card-header>
+        
+          <img md-card-image src="../assets/images/4players.png">
+
+          </md-card>
+        </md-grid-tile>
+    </md-grid-list><br>
+    <button id="DisconnectBtn" (click)="disconnect(this.user.name, this.user.password)" tabindex=-1>Déconnexion</button>
+  </body>
+</html>

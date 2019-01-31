@@ -1,0 +1,27 @@
+<html>
+  <body>
+    <br>
+    <h1 class="title">CHOISISSEZ UNE DIFFICULTÉ</h1>
+    <md-grid-list layout="row" cols="2">
+      <md-grid-tile colspan="1">
+          <md-card (click)="normalEvent()">
+            <md-card-header>
+              <h2 class="md-title">NORMAL</h2>
+            </md-card-header>
+            <img md-card-image src="http://www.clipartlord.com/wp-content/uploads/2016/10/lollipop14.png">
+          </md-card>
+
+      </md-grid-tile>
+      <md-grid-tile colspan="1">
+        <md-card (click)="hardEvent()">
+          <md-card-header>
+            <h2>DIFFICILE</h2>
+          </md-card-header>
+
+          <img md-card-image src="https://img.clipartfest.com/4450057fdd02f2cd4afcee0e08890a3b_-image-crossed-swords-crossed-sword-clipart-gif_256-256.gif">
+
+          </md-card>
+        </md-grid-tile>
+    </md-grid-list>
+  </body>
+</html>

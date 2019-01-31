@@ -1,0 +1,33 @@
+<html>
+
+<body>
+    <br>
+    <h1 class="title">PARTIE TERMINÉE</h1>
+    <button md-raised-button (click)="homepageEvent()">ACCEUIL</button>
+    <button md-raised-button (click)="replayEvent()">REJOUER</button>
+
+    <md-grid-list layout="row" cols="2">
+        <h2>VOICI LES MEILLEURS SCORES</h2>
+        <md-grid-tile colspan="1">
+            <md-card>
+                <md-card-header>
+                    <h2>NORMAL</h2>
+                </md-card-header>
+                <p *ngFor="let s of highScoresEasy; let i=index">{{i+1}}. {{s.username}} : {{ s.score }}</p>
+            </md-card>
+
+        </md-grid-tile>
+        <md-grid-tile colspan="1">
+            <md-card>
+                <md-card-header>
+                    <h2>DIFFICILE</h2>
+                </md-card-header>
+                <p *ngFor="let s of highScoresHard; let i=index">{{i+1}}. {{s.username}} : {{ s.score }}</p>
+            </md-card>
+        </md-grid-tile>
+
+    </md-grid-list>
+
+</body>
+
+</html>
